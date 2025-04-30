@@ -1,0 +1,130 @@
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(-2deg);
+    }
+    50% {
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Apply animations to elements */
+.logo-bubble {
+    animation: wiggle 5s ease-in-out infinite;
+}
+
+.urgent-bubble {
+    animation: pulse 3s infinite;
+}
+
+.hero {
+    animation: fadeIn 1s ease-out;
+}
+
+.comic-panel {
+    animation: popIn 0.5s ease-out forwards;
+}
+
+.service-icon {
+    animation: bounce 3s infinite;
+}
+
+.cta-button:hover {
+    animation: wiggle 0.5s ease-in-out;
+}
+
+/* Animation delays for sequential loading */
+.stats-panel {
+    animation-delay: 0.2s;
+}
+
+.service-panel:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.service-panel:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+/* Apply animations on hover where appropriate */
+.social-icon:hover {
+    animation: wiggle 0.5s ease-in-out;
+}
+
+.btn-learn-more:hover, 
+.btn-volunteer:hover, 
+.btn-subscribe:hover {
+    animation: pulse 1s;
+}
